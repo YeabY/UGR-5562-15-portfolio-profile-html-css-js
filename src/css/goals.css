@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Sofia Sans Condensed';
+    src: url('../fonts/SofiaSansCondensed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sofia Sans Condensed';
+    src: url('../fonts/SofiaSansCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Sofia Sans Condensed';
+}
+
+
+body{
+    width: 100%;
+    background-color: black;
+    color: white;   
+}
+
+.nav-desktop{
+    margin-top: 40px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.nav-desktop ul {
+    list-style-type: none;
+}
+
+#logo{
+    font-size: 30px;
+    color: #a93535;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#logo:hover{
+    transform: scale(1.1);
+    border-bottom: none;
+}
+
+.nav-desktop ul a{
+    font-size: 30px;
+    color: white;
+    margin-left: 3rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.nav-desktop ul{
+    display: flex;
+}
+
+.nav-desktop a:hover,
+.nav-desktop a.active{
+    color: #a93535;
+    border-bottom: 3px solid #a93535;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: none;
+}
+
+
+.nav-mobile-tablet ul {
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 9%;
+    list-style-type: none;
+    background-color: #0f0f0f;
+    display: none;
+    flex-direction: column;
+    width: 82%;
+    text-align: center;
+    z-index: 100;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.nav-mobile-tablet a {
+    padding: 16px;
+}
+
+.nav-mobile-tablet a:hover {
+    background-color: #292929;
+}
+.nav-mobile-tablet a{
+    color: white;
+}
+
+main section{
+    padding: 0 80px;
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#Goals h1 {
+    color:#a93535;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.heading {
+    margin-right: 80px;
+    margin-left: 100px;
+    width: 100%;
+    max-width: 1150px;
+    text-align: left;
+}
+
+blockquote {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+
+main p {
+    margin-bottom: 50px;
+    font-size: 24px;
+    text-align: left;
+}
+
+#hobbies-table{
+    border: 2px solid white;
+    width: 80vw;
+    border-collapse: collapse;
+}
+#hobbies-table th, #hobbies-table td {
+    border-bottom: 2px solid white;
+    border-top: none; 
+    border-left: none;
+    border-right: none;
+    font-size: 24px;
+    padding: 31px;
+}
+
+#hobbies-table th {
+    font-weight: bold;
+    color: #a93535;
+    font-style: italic;
+    font-size: 30px;
+}
+
+
+
+@media (max-width: 1194px)  {
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-desktop ul{
+        display: none;
+    }
+}
+
+@media (max-width:874px) and (max-height: 874px) { 
+    #logo, .nav-mobile-tablet ul {
+        font-size: 20px;
+    }
+
+    .nav-mobile-tablet ul {
+        margin-top: -16px;
+    }
+}
+
+footer {
+    display: none;
+}
+
+
+@media (min-height: 402px) and (max-height: 834px){
+    
+}
+
+@media (max-width: 874px) and (max-height: 874px){
+    #Goals h1 {
+        font-size: 20px;
+    }
+    
+    blockquote {
+        font-size: 16px;
+    }
+    
+    main p {
+        font-size: 16px;
+    }
+
+    #hobbies-table th, #hobbies-table td {
+        font-size: 16px;
+    }
+    
+    #hobbies-table th {
+        font-size: 20px;
+    }
+    
+    
+}
+
+@media (max-width: 500px){
+    #hobbies-table th, #hobbies-table td {
+        padding: 10px;
+    }
+}
+

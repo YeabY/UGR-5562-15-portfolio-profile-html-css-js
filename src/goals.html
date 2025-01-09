@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/web_icon_yeab.jpg">
+    <link rel="stylesheet" href="css/goals.css">
     <title>Goals - Yeab's Personal Space</title>
 </head>
 
 <body>
     <header>
-        <nav class="container">
-            <a href="home.html" class="logo">Yeab</a>
+        <nav class="nav-desktop">
+            <a href="home.html" id="logo">Yeab</a>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -19,16 +20,30 @@
                 <li><a href="goals.html" class="active">Goals</a></li>
                 <li><a href="adventure.html">Adventure</a></li>
             </ul>
+            <img onclick="switchPanel();" class="hamburger-menu" width="26px" height="26px" src="images/hamburger-menu-icon-open.jpg" alt="hamburger-menu">
         </nav>
+        <div class="nav-mobile-tablet">
+            <ul>
+                <a href="home.html"><li>Home</li></a>
+                <a href="about.html"><li>About</li></a>  
+                <a href="skills.html"><li>Skills</li></a>    
+                <a href="hobbies.html"><li>Hobbies</li></a>  
+                <a href="goals.html"><li>Goals</li></a>  
+                <a href="adventure.html"><li>Adventure</li></a>  
+            </ul>
+        </div>
     </header>
+
     <main id="Goals">
         <section class="goals-section">
             <h1>Personal Goals</h1>
-            <blockquote>
-                "Success is the sum of small efforts, repeated day in and day out." - Robert Collier
-            </blockquote>
-            <p>Here are some of my current goals as I work towards building a meaningful career in software engineering:</p>
-            <table class="styled-table">
+            <div class="heading">
+                <blockquote>
+                    "Success is the sum of small efforts, repeated day in and day out." - Robert Collier
+                </blockquote>
+                <p>Here are some of my current goals as I work towards building a meaningful career in software engineering:</p>
+            </div>
+            <table id="hobbies-table">
                 <thead>
                     <tr>
                         <th>Goal</th>
@@ -36,7 +51,7 @@
                         <th>Progress</th>
                     </tr>
                 </thead>
-                <tbody>
+            <tbody>
                     <tr>
                         <td>Build a Full-Stack Web App</td>
                         <td>End of Year 2024</td>
@@ -72,8 +87,6 @@
             </div>
             <div class="social-icons-footer">
                 <h3>Follow Me</h3>
-
-                <!-- The social media icons are sourced from an external CSS file and are not embedded within this HTML document. -->   
                     <a href="https://t.me/yyeab" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                     <a href="https://x.com/yeabyib" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
                     <a href="https://github.com/YeabY" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -85,5 +98,7 @@
             <h6>&copy; 2024 Yeabsira Yibeltal. All rights reserved.</h6>
         </section>
     </footer>
+    <script src="js/menuToggle.js"></script>
+
 </body>
 </html>

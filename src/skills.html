@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/web_icon_yeab.jpg">
+    <link rel="stylesheet" href="css/skills.css">
     <title>Skills - Yeab's Personal Space</title>
 </head>
 
 <body>
     <header>
-        <nav class="container">
-            <a href="home.html" class="logo">Yeab</a>
+        <nav class="nav-desktop">
+            <a href="home.html" id="logo">Yeab</a>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -19,16 +20,29 @@
                 <li><a href="goals.html">Goals</a></li>
                 <li><a href="adventure.html">Adventure</a></li>
             </ul>
+            <img onclick="switchPanel();" class="hamburger-menu" width="26px" height="26px" src="images/hamburger-menu-icon-open.jpg" alt="hamburger-menu">
         </nav>
-    </header>    
+        <div class="nav-mobile-tablet">
+            <ul>
+                <a href="home.html"><li>Home</li></a>
+                <a href="about.html"><li>About</li></a>  
+                <a href="skills.html"><li>Skills</li></a>    
+                <a href="hobbies.html"><li>Hobbies</li></a>  
+                <a href="goals.html"><li>Goals</li></a>  
+                <a href="adventure.html"><li>Adventure</li></a>  
+            </ul>
+        </div>
+    </header>
+        
     <main id="Skills">
-        <div class="skills-section"> <!-- Using a <div> here instead of a <section> because this content does not require a thematic heading and serves as a generic container for layout purposes. -->
+        <div class="skills-section">
             <figure class="skills-background-image">
                 <img src="images/skills-background-image.jpg" alt="Skills illustration">
             </figure>
     
             <article class="skills-content">
                 <h2>Skills</h2>
+                <div class="horizontal-line"></div>
                 <ul class="skills-list">
                     <li>
                         <img src="images/skills-html-logo.jpg" alt="HTML logo" class="skill-logo">
@@ -62,7 +76,7 @@
                         <img src="images/skills-photoshop-logo.jpg" alt="Photoshop logo" class="skill-logo">
                         <span>Adobe Photoshop</span>
                     </li>
-                </ul>
+                </ul>                   
             </article>
         </div>
     </main>    
@@ -76,8 +90,6 @@
             </div>
             <div class="social-icons-footer">
                 <h3>Follow Me</h3>
-
-                <!-- The social media icons are sourced from an external CSS file and are not embedded within this HTML document. -->   
                     <a href="https://t.me/yyeab" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                     <a href="https://x.com/yeabyib" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
                     <a href="https://github.com/YeabY" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -89,5 +101,7 @@
             <h6>&copy; 2024 Yeabsira Yibeltal. All rights reserved.</h6>
         </section>
     </footer>
+
+    <script src="js/menuToggle.js"></script>
 </body>
 </html>
